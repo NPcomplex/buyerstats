@@ -64,4 +64,4 @@ def create_cardlist_dict_from_deckstats(filename):
     
     
 if __name__ == '__main__':
-    create_pricing_csv_from_deckstats(r'C:\development\TCGPlayer_api\buyer_stats\taigam.txt', r'C:\development\TCGPlayer_api\buyer_stats\pricelist.csv', 'marketPrice')
+    create_pricing_csv_from_deckstats(r'C:\development\TCGPlayer_api\buyer_stats\tiana_additions_toplay.txt', r'C:\development\TCGPlayer_api\buyer_stats\tiana_additions_toplay_pricelist.csv', 'marketPrice')
