@@ -50,7 +50,7 @@ class TcgApiAuthenticator:
         #This could fail still on the time.time check since it might expire while we are processing later
         #That is ok since we can just make sure to re-authenticate if we fail a call on auth
         #I could use the .expires field instead of doing the math
-        if (expiriation_time is None) or (expiriation_time < int(time.time())): 
+        if (expiriation_time is None) or (int(expiriation_time) < int(time.time())): 
             access_dict = self.authorize_application()
             access_dict['expiration_time'] = access_dict['expires_in'] + int(time.time())
             write_dict_to_csv(access_dict, 'access_data.csv')
